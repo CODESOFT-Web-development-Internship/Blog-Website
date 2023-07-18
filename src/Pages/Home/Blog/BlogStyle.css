@@ -1,0 +1,86 @@
+.LargeHeading{
+    font-size: 20px;
+    color: var(---fontColor);
+}
+
+.divider{
+    background-color: var(---blueColor);
+    width: 150px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+
+.Thumnails{
+
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 01px 0px ;
+}
+
+
+#root > div:nth-child(2) > div:nth-child(7) > div:nth-child(1)
+{
+    padding: 0px !important;
+}
+
+.BlogCard{
+    background-color: rgb(244, 244, 244);
+    padding: 15px;
+    border-radius: 0px 0px 20px 20px ;
+    transition: 0.5s box-shadow;
+}
+.BlogCard:hover{
+    box-shadow: 5px 5px 10px var(---blueColor);
+}
+
+.blog{
+    margin-top: 10px;
+}
+
+.blogTitle{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(---blueColor);
+    text-align: start;
+    margin: 0px 0px;
+    /* padding: 5px; */
+}
+
+.category{
+    background-color: var(---orangeColor);
+    width: min-content;
+    padding: 4px 10px;
+    /* margin-top: 6px; */
+    /* margin-left: 6px; */
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 15px;
+}
+
+.subTitle{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(65, 65, 65);
+    
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: var(---orangeColor);
+    border-radius: 100px;
+    margin-right: 7px;
+}
+
+.metaDiscription{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(113, 113, 113);
+
+}

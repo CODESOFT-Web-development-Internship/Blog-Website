@@ -1,0 +1,52 @@
+.footerDiv{
+    background-color: var(---blueColor);
+    height: 5px;
+}
+.Footer{
+    background-color: rgb(244, 244, 244);
+    padding: 30px 80px;
+    height: 300px;
+}
+
+.subt1{
+    color: rgb(111, 111, 111);
+}
+.subt2{
+    color: rgb(111, 111, 111);
+    font-weight: 600;
+}
+
+.sub{
+    margin-left: 30px;
+}
+.footerHead{
+    font-size: 25px;
+}
+
+.primaryBtn{
+    background-color: var(---blueColor);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    margin-right: 20px;
+    transition: 0.5s box-shadow;
+}
+.primaryBtn:hover{
+    box-shadow: 5px 5px 10px var(---blueColor);
+}
+.secondryBtn{
+   
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: var(---blueColor);
+    font-weight: 500;
+    border: 2px solid var(---blueColor);
+    transition: 0.5s box-shadow;
+
+}
+.secondryBtn:hover{
+   
+    box-shadow: 5px 5px 10px gray;
+
+}

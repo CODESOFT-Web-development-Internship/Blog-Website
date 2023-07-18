@@ -1,0 +1,57 @@
+.NavBox{
+    padding: 20px;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.MenuList{
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.MenuList li {
+   margin-left: 20px;
+   color: grey;
+   cursor: pointer;
+   /* background-color: aqua; */
+   padding: 10px 30px ;
+   font-weight: 500;
+   border-radius: 30px;
+   transition: 0.5s box-shadow;
+}
+.MenuList li:hover{
+  color: var(---blueColor);
+  box-shadow: 5px 5px 10px var(---blueColor);
+}
+.MenuList li:active{
+  color: var(---blueColor);
+  box-shadow: 5px 5px 10px var(---blueColor);
+}
+
+
+
+.btn{
+    cursor: pointer;
+    padding: 12px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(---blueColor);
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    color: white;
+    transition: 0.5s box-shadow;
+}
+.btn:hover{
+   box-shadow: 5px 5px 10px var(---blueColor);
+}
+.profile{
+    border-radius: 100%;
+    margin-left: 20px;
+    border: 3px dashed var(---orangeColor);
+    object-fit: cover;
+    cursor: pointer;
+}
