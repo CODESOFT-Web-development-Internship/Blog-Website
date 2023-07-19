@@ -1,0 +1,60 @@
+.SinglePost{
+    width: 100%;
+    height: 100%;
+    padding: 40px 70px ;
+}
+
+.CoverImage{
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.PostDetails{
+    background-color: var(---divColor);
+    padding: 20px;
+
+    border-radius: 0px 0px 10px 10px;
+}
+
+.SideBar{
+    background-color: var(---divColor);
+    border-radius: 10px;
+    padding: 20px;
+    height: inherit;
+    position: sticky;
+    
+}
+
+.sideBar1{
+    width: 100%;
+    height: 300px;
+}
+
+.has{
+    font-size: 20px;
+    font-weight: 800;
+    color: var(---orangeColor);
+}
+.tags{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(---orangeColor);
+}
+
+.Icons{
+    margin-right: 5px;
+}
+
+.IconDIv{
+    display: flex;
+    /* background-color: pink; */
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 20px;
+    border: 1px dashed var(---orangeColor);
+}

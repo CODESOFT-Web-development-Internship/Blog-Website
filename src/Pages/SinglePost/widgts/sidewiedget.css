@@ -1,0 +1,112 @@
+.SideSearchBox {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 4px 7px 10px #7433df;
+}
+
+.socialMedia {
+  margin-bottom: 20px;
+  background-color: #000000;
+  padding: 15px 15px;
+  transition: 0.2s box-shadow;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.socialMedia:hover {
+  box-shadow: 4px 7px 10px #797979;
+}
+.youtube {
+  background-color: red;
+}
+
+.linkedin {
+  background-color: blue;
+}
+
+.sideBar1 {
+}
+.CateDiv {
+  background-color: white;
+  margin: 10px 0px;
+  padding: 10px;
+  font-size: 15px;
+  transition: 0.5s background-color;
+  transition: 0.5s border-radius;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.CateDiv:hover {
+  border-radius: 10px;
+  color: white;
+  background-color: #7433df;
+}
+
+.commentMainBox {
+  margin-top: 10px;
+  background-color: var(---divColor);
+  /* background-color: rebeccapurple; */
+  padding: 60px 30px;
+}
+
+.TextField {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  /* height: 40px; */
+  border: none;
+  padding: 10px;
+}
+.TextField {
+  box-shadow: 5px 5px 20px var(---blueColor);
+}
+
+.message {
+  max-height: 300px;
+  min-height: 100px;
+  max-width: 100%;
+  min-width: 100%;
+}
+.commentBox {
+  /* width: 400px !important; */
+}
+
+.allCommentBox {
+  background-color: white;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: 0.3s box-shadow;
+}
+
+.allCommentBox:hover{
+  box-shadow: 5px 5px 10px var(---blueColor);
+}
+.CommentName {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.info {
+  margin-left: 20px;
+
+}
+
+.Comments{
+  margin: 3px 0px;
+  color: grey;
+}
+
+.pageBox{
+  list-style: disc;
+  
+}
+
+.pageBox li{
+
+  font-size: 17px;
+  margin-top: 10px;
+  
+}

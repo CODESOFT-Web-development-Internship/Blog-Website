@@ -1,0 +1,18 @@
+.profilePic{
+    border-radius: 100%;
+}
+.profilepicBox{
+
+    padding-top: 40px;
+}
+
+.ProfileName{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(---blueColor);
+}
+
+
+.postList{
+    padding: 40px 190px;
+}

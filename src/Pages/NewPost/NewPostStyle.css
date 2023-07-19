@@ -1,0 +1,32 @@
+.mainBox{
+    width: 100%;
+    /* background-color: aquamarine; */
+    padding: 10px 120px;
+}
+
+.box{
+    padding: 50px;
+    width: 100%;
+}
+
+.PostTitle{
+    width: 96%;
+    height: 60px;  
+    font-size: 25px;
+    padding: 0px 20px; 
+    font-weight: 600;
+}
+
+.PostDis{
+    width: 100%;
+    font-size: 25px !important;
+    padding: 0px 20px; 
+    font-weight: 600;
+}
+
+.postBtn{
+    width: 60%;
+    height: 50px;
+    font-size: 20px;
+    background-color: var(---blueColor);
+}
