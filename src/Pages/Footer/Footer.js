@@ -28,6 +28,7 @@ function FooterSection() {
         </Row>
         </Col>
       </Row>
+      <Row className="Credit" justify={"center"}>Made With ❤️ <a href="https://nitishroy7033.blogspot.com/">Ni30 Roy</a></Row>
       <Row className="footerDiv"></Row>
     </>
   );

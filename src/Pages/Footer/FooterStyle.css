@@ -50,3 +50,10 @@
     box-shadow: 5px 5px 10px gray;
 
 }
+
+.Credit{
+    background-color: var(---divColor);
+    padding: 20px;
+    font-weight: 600;
+    color: grey;
+}
