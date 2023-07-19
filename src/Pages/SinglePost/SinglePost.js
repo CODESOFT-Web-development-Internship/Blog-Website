@@ -1,6 +1,6 @@
-import { Col, Row, Tag } from "antd";
+import { Col, Row, Tag, Rate } from "antd";
 import "./SingleStylePost.css";
-import { PrinterOutlined, ShareAltOutlined } from "@ant-design/icons";
+import { FrownOutlined, MehOutlined, SmileOutlined } from "@ant-design/icons";
 import coverImage from "../../assets/blog/blog19.jpg";
 import print from "../../assets/icons/print.svg";
 import share from "../../assets/icons/share.png";
@@ -14,8 +14,22 @@ import Category from "./widgts/Category";
 import CommentSection from "./widgts/CommentSection";
 import ContactSection from "../Contact/ContactCom";
 import ImportPageList from "./widgts/ImportPageList";
+const customIcons = {
+  1: <FrownOutlined size={"400px"} />,
+  2: <FrownOutlined />,
+  3: <MehOutlined />,
+  4: <SmileOutlined />,
+  5: <SmileOutlined />,
+};
 
+const onPrint=()=>
+{
+  window.print();
+  print("print");
+}
 function SinglePost() {
+
+
   return (
     <>
       <Row className="SinglePost" justify={"space-between"}>
@@ -34,43 +48,33 @@ function SinglePost() {
               <Row align={"middle"}>
                 <Row align={"top"} justify={"center"} to="">
                   <div className="IconDIv">
-                  
                     <img className="Icons" src={like} width={18} /> 200
                   </div>
                 </Row>
+                
                 <Row align={"top"} justify={"center"} to="">
                   <div className="IconDIv">
-                  
                     <img className="Icons" src={comment} width={18} /> 200
                   </div>
                 </Row>
                 <Row align={"top"} justify={"center"} to="">
                   <div className="IconDIv">
-                  
                     <img className="Icons" src={view} width={18} /> 200
                   </div>
                 </Row>
-               
               </Row>
-              <Row>
-                <Link to="">
-          
-                  <img
-                    className="Icons"
-                    src={share}
-                    width={18}
-                    height={18}
-                  />
-                </Link>
-                <Link to="">
              
-                  <img
-                    className="Icons"
-                    src={print}
-                    width={18}
-                    height={18}
-                  />{" "}
+              <Row align={"middle"} >
+              <Rate className="Icons" 
+              defaultValue={4}
+              character={({ index }) => customIcons[index + 1]}
+            />
+                <Link to="">
+                  <img className="Icons" src={share} width={18} height={18} />
                 </Link>
+             
+                  <img className="Icons" src={print} width={18} height={18} onClick={onPrint} />{" "}
+             
               </Row>
             </Row>
             <p>
@@ -120,21 +124,24 @@ function SinglePost() {
               <Tag color="warning">warning</Tag>
             </Row>
           </Col>
-          <CommentSection/>
+          {/* <Row justify={"center"} className="RateBox">
+            
+          </Row> */}
+          <CommentSection />
         </Col>
 
         <Col className="SideBar" span={8}>
-          <SidebarSear/>
+          <SidebarSear />
           <br></br>
           <br></br>
           <br></br>
-          <ConnectWithUs/>
+          <ConnectWithUs />
           <br></br>
-          <Category/>
+          <Category />
           <br></br>
-          <ContactSection/>
+          <ContactSection />
           <br></br>
-          <ImportPageList/>
+          <ImportPageList />
         </Col>
       </Row>
     </>

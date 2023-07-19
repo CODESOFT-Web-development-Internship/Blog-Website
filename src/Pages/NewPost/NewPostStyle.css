@@ -30,3 +30,21 @@
     font-size: 20px;
     background-color: var(---blueColor);
 }
+
+.UploadCoverImage{
+    object-fit: cover;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(178, 182, 255);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UploadButton{
+    /* background-color: aliceblue; */
+    width: 100%;
+    
+}
