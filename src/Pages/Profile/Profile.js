@@ -1,4 +1,4 @@
-import { Row, Tabs ,Col } from "antd";
+import { Row, Tabs, Col } from "antd";
 import React, { useEffect, useState } from "react";
 import "./ProfileStyle.css";
 import { Avatar, Button, List, Skeleton } from "antd";
@@ -12,16 +12,8 @@ function Profile() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [list, setList] = useState([]);
-  useEffect(() => {
-    fetch(fakeDataUrl)
-      .then((res) => res.json())
-      .then((res) => {
-        setInitLoading(false);
-        setData(res.results);
-        setList(res.results);
-      });
-  }, []);
-  const onLoadMore = () => {
+
+  const onLoadMore =     () => {
     setLoading(true);
     setList(
       data.concat(
@@ -58,6 +50,27 @@ function Profile() {
         <Button onClick={onLoadMore}>loading more</Button>
       </div>
     ) : null;
+
+  const [blogData, setBlogData] = useState([]);
+  const fetchBlog = async () => {
+    try {
+      const response = await fetch(
+        "https://localhost:7084/api/Post/GetAllPost"
+      );
+      if (!response.ok) {
+        console.log("Network response was not ok");
+      }
+      const jsonData = await response.json();
+      setBlogData(jsonData);
+      console.log(blogData);
+    } catch (ex) {
+      console.log("Error fetching data:", ex);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlog();
+  }, []);
   return (
     <>
       <Row justify={"center"} className="profilepicBox">
@@ -71,36 +84,16 @@ function Profile() {
 
       <Row justify={"center"}>
         <Col>
-          <h2 className="LargeHeading" >Your All Posts </h2>
+          <h2 className="LargeHeading">Your All Posts </h2>
           <div className="divider"></div>
         </Col>
       </Row>
       <div className="postList">
-        <List
-          className="demo-loadmore-list"
-          loading={initLoading}
-          itemLayout="horizontal"
-          loadMore={loadMore}
-          dataSource={list}
-          renderItem={(item) => (
-            <List.Item
-              actions={[
-                  <a key="list-loadmore-more">View</a>,
-                <a key="list-loadmore-edit">Edit</a>,
-                <a key="list-loadmore-more">Delete</a>,
-              ]}
-            >
-              <Skeleton avatar title={false} loading={item.loading} active>
-                <List.Item.Meta
-                  avatar={<Avatar src={item.picture.large} />}
-                  title={<a href="https://ant.design">{item.name?.last}</a>}
-                  description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                />
-                <div className="circle"></div>
-              </Skeleton>
-            </List.Item>
-          )}
-        />
+        {blogData.map((e) => (
+          <div>
+          
+          </div>
+        ))}
       </div>
     </>
   );

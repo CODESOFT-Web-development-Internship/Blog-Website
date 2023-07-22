@@ -7,13 +7,14 @@ import share from "../../assets/icons/share.png";
 import like from "../../assets/icons/LIKE.png";
 import comment from "../../assets/icons/comment.png";
 import view from "../../assets/icons/view.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SidebarSear from "./widgts/sidebarSearchBar";
 import ConnectWithUs from "./widgts/ConnectWithUs";
 import Category from "./widgts/Category";
 import CommentSection from "./widgts/CommentSection";
 import ContactSection from "../Contact/ContactCom";
 import ImportPageList from "./widgts/ImportPageList";
+import { useEffect } from "react";
 const customIcons = {
   1: <FrownOutlined size={"400px"} />,
   2: <FrownOutlined />,
@@ -28,8 +29,13 @@ const onPrint=()=>
   print("print");
 }
 function SinglePost() {
+  const location = useLocation();
+  const blogData = location.blogData;
 
 
+  useEffect(()=>{
+    console.log(blogData);
+  })
   return (
     <>
       <Row className="SinglePost" justify={"space-between"}>
@@ -42,7 +48,7 @@ function SinglePost() {
           />
           <Col className="PostDetails" span={24}>
             <h1 className="BlogHeading">
-              Neeon - WordPress News Magazine Theme
+            Neeon - WordPress News Magazine Theme
             </h1>
             <Row justify={"space-between"} className="IconBox">
               <Row align={"middle"}>

@@ -18,7 +18,6 @@ function App() {
     <Router>
       <>
         <Navigation />
-
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/NewPost" element={<NewPost />} />

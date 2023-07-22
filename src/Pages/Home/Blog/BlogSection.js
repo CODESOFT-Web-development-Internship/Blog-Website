@@ -117,13 +117,13 @@ const blogDataList = [
   },
 ];
 
-
 function BlogSection() {
   const [blogData, setBlogData] = useState([]);
-
   const fetchBlog = async () => {
     try {
-      const response = await fetch("https://localhost:7136/api/Post/GetAllPosts");
+      const response = await fetch(
+        "https://localhost:7084/api/Post/GetAllPost"
+      );
       if (!response.ok) {
         console.log("Network response was not ok");
       }
@@ -137,17 +137,21 @@ function BlogSection() {
 
   useEffect(() => {
     fetchBlog();
-  }, []);
+  }, []); // Call fetchBlog only once when the component mounts
 
-  const onClickCol=()=>{
-    console.log("jsdfh hf sdkaf sdkfadf");
-    <Link to={"/SinglePost"}></Link>
-  }
+  // useEffect(() => {
+  //   console.log(blogData); // This will now show the updated value of blogData.
+  // }, [blogData]);
+
+  const onClickCol = () => {
+    console.log(blogData);
+  };
   return (
     <>
       <h2 className="LargeHeading">Latest Blog </h2>
       <div className="divider"></div>
       <br></br>
+      <button onClick={onClickCol}>Click</button>
 
       <Row
         gutter={{
@@ -158,33 +162,36 @@ function BlogSection() {
         }}
         justify={"space-between"}
       >
-        {blogDataList.map((e) => (
-          <Col
-            className="gutter-row blog "
-            span={6}
-            style={{ cursor: "pointer" }}
-            
-          >
-           <Link to={"/SinglePost"}>
-           <img src={e.thumnails} className="Thumnails" />
-            <div className="BlogCard">
-              <div className="category">CATEGORY</div>
-              <h3 className="blogTitle">{e.title}</h3>
-              <p className="subTitle">{e.subtitle}</p>
-              <Row align={"middle"} justify={"space-between"}>
-                <Row align={"middle"} className="metaDiscription">
-                  {" "}
-                  <div className="circle"> </div> By : {e.author}
-                </Row>
-                <Row align={"middle"} className="metaDiscription">
-                  {" "}
-                  <div className="circle"> </div> On :{e.date}
-                </Row>
-              </Row>
-            </div>
-           </Link>
-          </Col>
-        ))}
+        {blogData == null ? (
+          <div>Not Post</div>
+        ) : (
+          blogData.map((e) => (
+            <Col
+              className="gutter-row blog "
+              span={6}
+              style={{ cursor: "pointer" }}
+            >
+              <Link to={`/SinglePost/${e.id}`} >
+                <img src={e.coverImage} className="Thumnails" />
+                <div className="BlogCard">
+                  <div className="category">CATEGORY</div>
+                  <h3 className="blogTitle">{e.title}</h3>
+                  <p className="subTitle">{e.description}</p>
+                  <Row align={"middle"} justify={"space-between"}>
+                    <Row align={"middle"} className="metaDiscription">
+                      {" "}
+                      <div className="circle"> </div> By : {e.author}
+                    </Row>
+                    <Row align={"middle"} className="metaDiscription">
+                      {" "}
+                      <div className="circle"> </div> On :{e.postTime}
+                    </Row>
+                  </Row>
+                </div>
+              </Link>
+            </Col>
+          ))
+        )}
       </Row>
       <br></br>
       <br></br>
